@@ -118,8 +118,7 @@ elif choice == 4:
               print(x.upper(), ":")
               print(ip_scraping(ip)[x])
               print("n")
-              
-              quit()
+
               
               
 elif choice == 5:
