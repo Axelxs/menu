@@ -19,27 +19,20 @@ import binascii
 import ipaddress
 import platform
 
-RR = "\033[29;m"
-def a(s):
-        for c in s + '\n':
-                sys.stdout.write(c)
-                sys.stdout.flush()
-                time.sleep(1./170)
+print ("╭━╮╭━╮╭━━━╮╭━╮╱╭╮╭╮╱╭╮   ╭━━━╮╭━━━╮╭━━━╮╭━━╮╭━━━╮╭━━━━╮╭━━━╮")
+print("┃┃╰╯┃┃┃╭━━╯┃┃╰╮┃┃┃┃╱┃┃   ┃╭━╮┃┃╭━╮┃┃╭━╮┃╰┫┣╯┃╭━╮┃┃╭╮╭╮┃┃╭━╮┃")
+print("┃╭╮╭╮┃┃╰━━╮┃╭╮╰╯┃┃┃╱┃┃   ┃╰━━╮┃┃╱╰╯┃╰━╯┃╱┃┃╱┃╰━╯┃╰╯┃┃╰╯┃╰━━╮")
+print("┃┃┃┃┃┃┃╭━━╯┃┃╰╮┃┃┃┃╱┃┃   ╰━━╮┃┃┃╱╭╮┃╭╮╭╯╱┃┃╱┃╭━━╯╱╱┃┃╱╱╰━━╮┃")
+print("┃┃┃┃┃┃┃╰━━╮┃┃╱┃┃┃┃╰━╯┃   ┃╰━╯┃┃╰━╯┃┃┃┃╰╮╭┫┣╮┃┃╱╱╱╱╱┃┃╱╱┃╰━╯┃")
+print("╰╯╰╯╰╯╰━━━╯╰╯╱╰━╯╰━━━╯   ╰━━━╯╰━━━╯╰╯╰━╯╰━━╯╰╯╱╱╱╱╱╰╯╱╱╰━━━╯")
+print("╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱   ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱")
+print("╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱   ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱")
 
-a(RR+"╭━╮╭━╮╭━━━╮╭━╮╱╭╮╭╮╱╭╮   ╭━━━╮╭━━━╮╭━━━╮╭━━╮╭━━━╮╭━━━━╮╭━━━╮")
-a(RR+"┃┃╰╯┃┃┃╭━━╯┃┃╰╮┃┃┃┃╱┃┃   ┃╭━╮┃┃╭━╮┃┃╭━╮┃╰┫┣╯┃╭━╮┃┃╭╮╭╮┃┃╭━╮┃")
-a(RR+"┃╭╮╭╮┃┃╰━━╮┃╭╮╰╯┃┃┃╱┃┃   ┃╰━━╮┃┃╱╰╯┃╰━╯┃╱┃┃╱┃╰━╯┃╰╯┃┃╰╯┃╰━━╮")
-a(RR+"┃┃┃┃┃┃┃╭━━╯┃┃╰╮┃┃┃┃╱┃┃   ╰━━╮┃┃┃╱╭╮┃╭╮╭╯╱┃┃╱┃╭━━╯╱╱┃┃╱╱╰━━╮┃")
-a(RR+"┃┃┃┃┃┃┃╰━━╮┃┃╱┃┃┃┃╰━╯┃   ┃╰━╯┃┃╰━╯┃┃┃┃╰╮╭┫┣╮┃┃╱╱╱╱╱┃┃╱╱┃╰━╯┃")
-a(RR+"╰╯╰╯╰╯╰━━━╯╰╯╱╰━╯╰━━━╯   ╰━━━╯╰━━━╯╰╯╰━╯╰━━╯╰╯╱╱╱╱╱╰╯╱╱╰━━━╯")
-a(RR+"╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱   ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱")
-a(RR+"╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱   ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱")
-
-a(RR+" Creador: Axel")      
-a(RR+" Tiktok: axel.is.pastriboy")
+print(" Creador: Axel")      
+print(" Tiktok: axel.is.pastriboy")
 print("")
-a(RR+"╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱   ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱")
-choice = int(input("1.-BOTNET  TIKTOK\n2.-ESCANEO WEP\n3.-spam de correos gmail\n4.-info de IP publica\n5.-Servidor privado http\n6.-Mi IP privada \n7.-info basica de cualquier tipo de ip \n8.-Info de un numero\n9.-Barrido de IP\nSeleccione una opsion: ")) 
+print("╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱   ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱")
+choice = int(input("1.-BOTNET  TIKTOK\n2.-ESCANEO WEP\n3.-spam de correos gmail\n4.-info de IP publica\n5.-Servidor privado http\n6.-Mi IP privada \n7.-info basica de cualquier tipo de ip \n8.-Info de un numero\n9.-Barrido de IP\n10.-Bot de telegram\nSeleccione una opsion: ")) 
 b = 1         
 if choice == 1:
                     print("\033[;32m")
@@ -270,4 +263,26 @@ elif choice == 9:
                     else:
                         print(addr, port, "Failed")      
                         
-
+                          
+elif choice == 10:
+    
+    
+    
+    print("BOT DE TELEGRAM:http://t.me/Pastryboybot")
+    print ("Ese es el link de el bot")
+    print("El bot esta abierto")
+    TOKEN = "5203289182:AAEa7KpNV4Fsn2NgUkJWXrpLD1YOlEYk_kc" 
+    bot = telebot.TeleBot(TOKEN)  
+    @bot.message_handler(commands=['start', 'help'])
+    def send_welcome(message):
+        bot.reply_to(message, "")
+    @bot.message_handler(func=lambda message: True)
+    def echo_all(message):
+        bot.reply_to(message, message.text)
+    bot.polling()
+    user = bot.get_me()
+    print(user)
+    updates = bot.get_updates()
+    print(updates)
+    chat_id = "5170764644"
+ 
