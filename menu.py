@@ -1,6 +1,8 @@
 import requests
 import json
 from email.mime.multipart import MIMEMultipart
+from smtplib import SMTP
+from email.mime.multipart import MIMEMultipart
 from email.mime.base import MIMEBase
 from smtplib import SMTP
 from email.mime.text import MIMEText
@@ -18,6 +20,8 @@ from datetime import datetime
 import binascii
 import ipaddress
 import platform
+
+
 
 RR = "\033[29;m"
 def a(s):
@@ -42,14 +46,23 @@ a(RR+"╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱   ╱�
 choice = int(input("1.-BOTNET  TIKTOK\n2.-ESCANEO WEP\n3.-spam de correos gmail\n4.-info de IP publica\n5.-Servidor privado http\n6.-Mi IP privada \n7.-info basica de cualquier tipo de ip \n8.-Info de un numero\n9.-Barrido de IP\n10.-BotChat\n11.-TelegramBot\n[00] Exit\nSeleccione una opsion: ")) 
 b = 1         
 if choice == 1:
-                    print("\033[;32m")
-                    username = ""
-                    username = input("usuario:")
-                    while b < 9999999999999999999999:
-                        print (("[*]"),"REPORT-BOT FOR TIKTOK USER @", (username), (b))
-                        sleep(1)
-                        b = b + 1
-                    quit()
+  op = int(input("1.-atake consentrado\n2.-atake bruto\nSeleccione una opsion:"))  
+  if op == 1:
+   print("\033[;32m")
+   username = ""
+   username = input("usuario:")
+   while b < 9999999999999999999999:
+         print (("[*]"),"REPORT-BOT FOR TIKTOK USER @", (username), (b))
+         sleep(1)
+         b = b + 1
+  elif op == 2:
+   print("\033[;32m")
+   username = ""
+   username = input("usuario:")
+   while b < 9999999999999999999999:
+         print (("[*]"),"REPORT-BOT FOR TIKTOK USER @", (username), (b))
+         b = b + 1
+     
                 
                   
                   
@@ -84,30 +97,37 @@ elif choice == 2:
                 quit()
                   
 elif choice == 3:
-    print("\033[;32m")
-    print ("SMPAM DE GMAIL")
-    sleep(0.7)
-    print ("cada atake trae 100 correos")
-    sleep(0.7)
-    gmail = ""
-    gmail = input("Gmail de la bictima :")
-    asunto = ""
-    asunto = input("Asunto del correo:")
-    texto = ""
-    texto = input("texto del correo:")
-    a = 0
-    while a < 100:
-        mensaje =  MIMEMultipart ()
-        mensaje ["from"] = "gogle.spport.mx@gmail.com"
-        mensaje ["To"] = (gmail)
-        mensaje ["subject"] = (asunto)
-        mensaje = MIMEText (texto)
-        smtp = SMTP ("smtp.gmail.com")
-        smtp.starttls()
-        smtp.login("gogle.spport.mx@gmail.com", "gogle2000")
-        smtp.sendmail ("gogle.spport.mx@gmail.com", (gmail), mensaje.as_string())
-        smtp.quit()
-    a = a +1
+   
+   from email.mime.multipart import MIMEMultipart
+   from email.mime.text import MIMEText
+   import smtplib
+   msg = MIMEMultipart()
+   a = ""
+   a = input("gmail de la victima:")
+   b = input("asunto:")
+   c = input ("contenido:")
+   d = float(input("numero se mensajes que quieres enviar:"))
+   message = (c)
+   e = 0
+   while e < d:
+    password = "gogle2000"
+    msg['From'] = "gogle.spport.mx@gmail.com"
+    msg['To'] = (a)
+    msg['Subject'] = (b)
+    msg.attach(MIMEText(message, 'plain'))
+    server = smtplib.SMTP('smtp.gmail.com: 587')
+    server.starttls()
+    server.login(msg['From'], password)
+    server.sendmail(msg['From'], msg['To'], msg.as_string())
+    e = e+1
+   
+   server.quit()
+   try:
+       print ("correo(s) enviado a %s con exito" % (msg['To']))
+       
+   except:
+    print("[#]ERROR")
+    
                       
                       
 elif choice == 4:
@@ -306,4 +326,3 @@ elif choice == 11:
    chat_id = "5170764644"
   
 
- 
