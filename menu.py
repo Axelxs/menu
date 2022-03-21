@@ -20,7 +20,7 @@ from datetime import datetime
 import binascii
 import ipaddress
 import platform
-
+os.system("clear")
 
 RR = "\033[29;m"
 def a(s):
