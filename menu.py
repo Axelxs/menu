@@ -22,25 +22,23 @@ import ipaddress
 import platform
 
 
-
 RR = "\033[29;m"
 def a(s):
         for c in s + '\n':
                 sys.stdout.write(c)
                 sys.stdout.flush()
                 time.sleep(1./170)
+00
 
-a(RR+"╭━╮╭━╮╭━━━╮╭━╮╱╭╮╭╮╱╭╮   ╭━━━╮╭━━━╮╭━━━╮╭━━╮╭━━━╮╭━━━━╮╭━━━╮")
-a(RR+"┃┃╰╯┃┃┃╭━━╯┃┃╰╮┃┃┃┃╱┃┃   ┃╭━╮┃┃╭━╮┃┃╭━╮┃╰┫┣╯┃╭━╮┃┃╭╮╭╮┃┃╭━╮┃")
-a(RR+"┃╭╮╭╮┃┃╰━━╮┃╭╮╰╯┃┃┃╱┃┃   ┃╰━━╮┃┃╱╰╯┃╰━╯┃╱┃┃╱┃╰━╯┃╰╯┃┃╰╯┃╰━━╮")
-a(RR+"┃┃┃┃┃┃┃╭━━╯┃┃╰╮┃┃┃┃╱┃┃   ╰━━╮┃┃┃╱╭╮┃╭╮╭╯╱┃┃╱┃╭━━╯╱╱┃┃╱╱╰━━╮┃")
-a(RR+"┃┃┃┃┃┃┃╰━━╮┃┃╱┃┃┃┃╰━╯┃   ┃╰━╯┃┃╰━╯┃┃┃┃╰╮╭┫┣╮┃┃╱╱╱╱╱┃┃╱╱┃╰━╯┃")
-a(RR+"╰╯╰╯╰╯╰━━━╯╰╯╱╰━╯╰━━━╯   ╰━━━╯╰━━━╯╰╯╰━╯╰━━╯╰╯╱╱╱╱╱╰╯╱╱╰━━━╯")
-a(RR+"╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱   ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱")
+a(RR+"█▀▄▀█ █▀▀▀ █▄░▒█ █░▒█ ░░ █▀▀▀█ █▀▀█ █▀▀█ ▀█▀ █▀▀█ ▀▀█▀▀ █▀▀▀█")
+a(RR+"█▒█▒█ █▀▀▀ █▒█▒█ █░▒█ ▀▀ ▀▀▀▄▄ █░░░ █▄▄▀ ░█░ █▄▄█ ░▒█░░ ▀▀▀▄▄")
+a(RR+"█░░▒█ █▄▄▄ █░░▀█ ▀▄▄▀ ░░ █▄▄▄█ █▄▄█ █░▒█ ▄█▄ █░░░ ░▒█░░ █▄▄▄█")
 a(RR+"╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱   ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱")
 
 a(RR+" Creador: Axel")      
-a(RR+" Tiktok: axel.is.pastriboy")
+a(RR+" Tiktok: axel.is.pastriboy") 
+a(RR+" instagram: a30xp30")
+a(RR+" YouTube: a..x..e..l..x..s")
 print("")
 a(RR+"╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱   ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱")
 choice = int(input("1.-BOTNET  TIKTOK\n2.-ESCANEO WEP\n3.-spam de correos gmail\n4.-info de IP publica\n5.-Servidor privado http\n6.-Mi IP privada \n7.-info basica de cualquier tipo de ip \n8.-Info de un numero\n9.-Barrido de IP\n10.-BotChat\n11.-TelegramBot\n[00] Exit\nSeleccione una opsion: ")) 
@@ -48,20 +46,28 @@ b = 1
 if choice == 1:
   op = int(input("1.-atake consentrado\n2.-atake bruto\nSeleccione una opsion:"))  
   if op == 1:
+   os.system("clear")
+   a(RR+"  █▀▀█ █▀▀▀ █▀▀█ █▀▀▀█ █▀▀█ ▀▀█▀▀ ░░ █▀▀█ █▀▀▀█ ▀▀█▀▀")
+   a(RR+"  █▄▄▀ █▀▀▀ █▄▄█ █░░▒█ █▄▄▀ ░▒█░░ ▀▀ █▀▀▄ █░░▒█ ░▒█░░")
+   a(RR+"  █░▒█ █▄▄▄ █░░░ █▄▄▄█ █░▒█ ░▒█░░ ░░ █▄▄█ █▄▄▄█ ░▒█░░")
    print("\033[;32m")
    username = ""
    username = input("usuario:")
-   while b < 9999999999999999999999:
+   while True:
          print (("[*]"),"REPORT-BOT FOR TIKTOK USER @", (username), (b))
          sleep(1)
          b = b + 1
   elif op == 2:
+   os.system("clear")
+   a(RR+"  █▀▀█ █▀▀▀ █▀▀█ █▀▀▀█ █▀▀█ ▀▀█▀▀ ░░ █▀▀█ █▀▀▀█ ▀▀█▀▀")
+   a(RR+"  █▄▄▀ █▀▀▀ █▄▄█ █░░▒█ █▄▄▀ ░▒█░░ ▀▀ █▀▀▄ █░░▒█ ░▒█░░")
+   a(RR+"  █░▒█ █▄▄▄ █░░░ █▄▄▄█ █░▒█ ░▒█░░ ░░ █▄▄█ █▄▄▄█ ░▒█░░")
    print("\033[;32m")
    username = ""
    username = input("usuario:")
-   while b < 9999999999999999999999:
+   while True:
          print (("[*]"),"REPORT-BOT FOR TIKTOK USER @", (username), (b))
-         b = b + 1
+         b = b + 1  
      
                 
                   
@@ -95,8 +101,21 @@ elif choice == 2:
     except:
                 print("ERROR")
                 quit()
+    def myping(host):
+      response = os.system("ping -c 1 " + host)
+    
+      if response == 0:
+        return True
+      else:
+        return False
+        
+    print(myping(a))
                   
 elif choice == 3:
+   os.system("clear")
+   a (RR+"█▀▀ █▀▀ █▀▀▄ █▀▀▄ █▀▄▀█ █▀▀█ ░▀░ █░░")
+   a(RR+"▀▀█ █▀▀ █░░█ █░░█ █░▀░█ █▄▄█ ▀█▀ █░░")
+   a(RR+"▀▀▀ ▀▀▀ ▀░░▀ ▀▀▀░ ▀░░░▀ ▀░░▀ ▀▀▀ ▀▀▀")
    
    from email.mime.multipart import MIMEMultipart
    from email.mime.text import MIMEText
@@ -169,12 +188,12 @@ elif choice == 5:
             self.wfile.write((text).encode('utf-8'))
      IP = ""
      IP = input("ingresa tu direccion IP, si no quieres solo pon 'localhost': ")
-     print("para entrar al server busca en gogle 'localhost:8443 o si pusiste tu ip solo cambias el localhost por la IP")
+     print("para entrar al server busca en gogle 'localhost:8000 o si pusiste tu ip solo cambias el localhost por la IP")
      text = ""
      text = input ("ingresa el contenido del server:")
      if __name__ == '__main__':
          from http.server import HTTPServer
-         server = HTTPServer(( (IP), 8443,), GetHandler)
+         server = HTTPServer(( (IP), 8000,), GetHandler)
      try:
         print("coneccion exitosa :)")
         sleep(1)
@@ -325,4 +344,5 @@ elif choice == 11:
    print(updates)
    chat_id = "5170764644"
   
+
 
