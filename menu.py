@@ -1,5 +1,9 @@
 import requests
 import json
+import urllib.request as request
+import ssl
+from urllib import request
+from binascii import hexlify
 from email.mime.multipart import MIMEMultipart
 from smtplib import SMTP
 from email.mime.multipart import MIMEMultipart
@@ -20,6 +24,7 @@ from datetime import datetime
 import binascii
 import ipaddress
 import platform
+
 os.system("clear")
 
 RR = "\033[29;m"
@@ -41,7 +46,7 @@ a(RR+" instagram: a30xp30")
 a(RR+" YouTube: a..x..e..l..x..s")
 print("")
 a(RR+"╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱   ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱")
-choice = int(input("1.-BOTNET  TIKTOK\n2.-ESCANEO WEP\n3.-spam de correos gmail\n4.-info de IP publica\n5.-Servidor privado http\n6.-Mi IP privada \n7.-info basica de cualquier tipo de ip \n8.-Info de un numero\n9.-Barrido de IP\n10.-BotChat\n11.-TelegramBot\n12.-DDOS\nSeleccione una opsion: ")) 
+choice = int(input("1.-BOTNET  TIKTOK\n2.-ESCANEO WEP\n3.-spam de correos gmail\n4.-info de IP publica\n5.-Servidor privado http\n6.-Mi IP privada \n7.-info basica de cualquier tipo de ip \n8.-Info de un numero\n9.-Barrido de IP\n10.-BotChat\n11.-TelegramBot\n12.-DDOS\n13.-codigo fuente de una wep\n14.-SSL wep\nSeleccione una opsion: ")) 
 b = 1         
 if choice == 1:
   op = int(input("1.-atake consentrado\n2.-atake bruto\nSeleccione una opsion:"))  
@@ -100,7 +105,6 @@ elif choice == 2:
             print("escaneo exitoso")
     except:
                 print("ERROR")
-                quit()
     def myping(host):
       response = os.system("ping -c 1 " + host)
     
@@ -110,6 +114,19 @@ elif choice == 2:
         return False
         
     print(myping(a))
+    def formato_direccion_ip():
+    		
+    		 equipo_remoto_a = socket.gethostbyname(a)
+    
+    		 for dir_ip in [equipo_remoto_a]:
+    					 empaquetada_ip = socket.inet_aton(dir_ip)
+    					 no_empaquetada_ip = socket.inet_ntoa(empaquetada_ip)
+    					 print ("Direccion Ip: %s => Empaquetada: %s, No Empaquetada: %s" %(dir_ip, hexlify(empaquetada_ip), no_empaquetada_ip))
+    
+    if __name__ == '__main__':
+    		 formato_direccion_ip()
+    		 
+    		 quit()
                   
 elif choice == 3:
    os.system("clear")
@@ -371,3 +388,51 @@ elif choice == 12:
          print("[+]Peticion mandada a ", (url))
         except:
             print("[-]ERROR")
+  
+   
+elif choice == 13:
+   
+    
+    url = input("url de la pagina wep: ")
+    response = request.urlopen(url)
+    print('RESPONSE:', response)
+    print('URL     :', response.geturl())
+    
+    headers = response.info()
+    print('DATE    :', headers['date'])
+    print('HEADERS :')
+    print('---------')
+    print(headers)
+    
+    data = response.read().decode('utf-8')
+    print('LENGTH  :', len(data))
+    print('DATA    :')
+    print('---------')
+    print(data)  
+    
+                      
+                                         
+elif choice == 14:
+ 
+    print("este script manda mensajes encriotados a paginas wep")
+    t = input("Texto: ")
+    xd = input("pagina wep: ")
+        
+    if (not os.environ.get((t), '') and
+    getattr(ssl, '_create_unverified_context', None)): 
+    
+       ssl._create_default_https_context = ssl._create_unverified_context
+       class InternetOk():
+            def Internet(self):
+                siInternet = False
+                while not siInternet:    
+                    try :
+                        web = (xd)
+                        data = request.urlopen(web)
+                        siInternet = True
+                        break
+                    except:
+                        siInternet = False
+                return  siInternet
+    inter = InternetOk()
+    print (inter.Internet())                                                                                
