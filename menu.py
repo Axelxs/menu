@@ -1,3 +1,13 @@
+import os
+os.system('pip install requests')
+os.system('pip install nmap')
+os.system('pip install telebot')
+os.system("pkg install nmap")
+try:
+    print("")
+except:
+    os.system("apt install nmap")
+os.system('clear')
 import requests
 from time import sleep
 from os import name, system
@@ -17,6 +27,7 @@ import telebot
 import logging
 import asyncio
 import sys
+import nmap
 from time import sleep
 from http.server import BaseHTTPRequestHandler
 import time
@@ -26,9 +37,9 @@ from datetime import datetime
 import binascii
 import ipaddress
 import platform
-os.system('pip install requests')
-os.system('pip install telebot')
-os.system('clear')
+
+
+
 RR = "\033[29;m"
 def a(s):
         for c in s + '\n':
@@ -224,8 +235,9 @@ elif choice == 2:
     
     if __name__ == '__main__':
     		 formato_direccion_ip()
-    		 
-    		 quit()
+    a = f"nmap -vv {a}"
+    os.system(a)
+    quit()
                   
 elif choice == 3:
    os.system("clear")
@@ -567,3 +579,4 @@ elif choice == 15:
     while True:
         a = input(">>>")
         os.system(a)    
+       
